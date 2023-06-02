@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 1520px;
+            margin-top: 110px;
+            display: flex;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family:serif;
+            background-color: rgb(171, 209, 221);
+        }
+        .calc
+        {
+            background-color: rgb(184, 244, 255);
+            width: 370px;
+            border: solid black;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 10px;
+            
+           
+        }
+         #outputbox{
+            width:310px;
+            height:65px;
+            font-size: 45px;
+            font-family:'Times New Roman', Times, serif
+            padding: 0px;
+            text-align:end;
+
+         }
+         .btn{
+             margin-top: 5px;
+             width: 390px;
+             margin-left: 70px;
+             margin-top: 10px;
+            }
+            .btn button{
+                width: 70px;
+                background-color: rgb(215, 238, 238);
+                height: 70px;
+            border-radius: 15px;
+            margin: 3.2px;
+         }
+    </style>
+</head>
+<body>
+    <h1>MINI CALCI</h1>
+    <div class="calc" >
+
+        <input type="text" placeholder="0" id="outputbox" >
+
+
+        <div class="btn">
+            <button onclick="display('9')">9</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('+')">+</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('1')">1</button>
+            <button onclick="display('-')">-</button>
+            <button onclick="display('0')">0</button>
+            <button onclick="display('00')">00</button>
+            <button onclick="display('000')">000</button>
+            <button onclick="display('/')">/</button>
+            <button onclick="display('/')">/</button>
+            <button onclick="display('*')">*</button>
+            <button onclick="display('%')">%</button>
+            <button onclick="Clear()">clr</button>
+            
+         </div>
+        
+    </div>
+    <script>
+        let output=document.getElementById("outputbox")
+        function display(n){
+            output.value +=n;
+        }
+        
+         function calculate(){
+ 
+             output.value=eval(output.value);
+         }
+        
+         function Clear(){
+ 
+             output.value = "0";
+         }
+        </script>
+</body>
+</html>
